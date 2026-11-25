@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMCOS – syntetiskt mätprov</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: #f3f8ff; background: radial-gradient(ellipse at 93% 0%, #163659, transparent 56%), #0a1626; font: 16px/1.45 system-ui, sans-serif; }
+    main { max-width: 1140px; margin: auto; padding: 36px 36px 32px; }
+    header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; padding-bottom: 16px; border-bottom: 1px solid #33516d; }
+    .brand { color: #72ddff; font-weight: 850; font-size: 24px; letter-spacing: .13em; }
+    .muted, footer { color: #c0d0e3; }
+    h1 { font-size: clamp(32px, 5vw, 58px); line-height: 1.04; letter-spacing: -.052em; margin: 22px 0 8px; }
+    p { margin: 0; }
+    .spans, .results { display: grid; gap: 14px; margin: 22px 0 0; }
+    .spans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .results { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; }
+    .card { padding: 14px 17px; margin: 0; background: #101f32; border: 1px solid #385470; border-radius: 12px; }
+    dt { font-weight: 650; color: #d3e2f5; }
+    dd { margin: 5px 0 0; }
+    code { color: #f7fbff; font: 700 20px/1.4 ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+    .result-value { display: block; font-size: 27px; font-weight: 800; line-height: 1.2; margin-bottom: 5px; }
+    .no { color: #ffbf9d; } .yes { color: #74e6c6; } .unknown { color: #a7c9ff; }
+    .pilot { margin-top: 20px; }
+    .pilot h2 { margin: 0 0 7px; font-size: 22px; }
+    .pilot p + p { margin-top: 8px; }
+    .pilot a { color: #8ce2ff; text-underline-offset: .2em; }
+    .pilot a:focus-visible { outline: 2px solid #8ce2ff; outline-offset: 3px; }
+    footer { border-top: 1px solid #33516d; margin-top: 22px; padding-top: 12px; font-size: .9rem; }
+    @media (max-width: 650px) {
+      main { padding: 22px 17px; }
+      .spans, .results { grid-template-columns: minmax(0, 1fr); gap: 9px; margin-top: 16px; }
+      .card { padding: 10px 13px; }
+      h1 { margin-top: 18px; }
+      footer { margin-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header><span class="brand">AMCOS</span><span class="muted">Syntetiskt mätprov · sparat resultat</span></header>
+    <h1>Exakt återgivning av ett textspann</h1>
+    <p class="muted">Uppgiften var att kopiera texten ordagrant, inklusive formateringstecken.</p>
+    <dl class="spans">
+      <div class="card"><dt>Original</dt><dd><code>The **A** works</code></dd></div>
+      <div class="card"><dt>Rapporterat</dt><dd><code>The A works</code></dd></div>
+    </dl>
+    <dl class="results">
+      <div class="card"><dt>Uppgiften uppfylldes</dt><dd><span class="result-value no">Nej</span>Fyra asterisker saknas.</dd></div>
+      <div class="card"><dt>Resultatet gick att mäta</dt><dd><span class="result-value yes">Ja</span>Ett motsvarande ställe i källan hittades.</dd></div>
+      <div class="card"><dt>Upprepbarhet</dt><dd><span class="result-value unknown">Oavgjord</span>Provet hade noll jämförelsepar.</dd></div>
+    </dl>
+    <section class="card pilot" aria-labelledby="pilot-title">
+      <h2 id="pilot-title">Vill ni utforska AMCOS tillsammans med oss?</h2>
+      <p>Vi söker designpartners som arbetar med AI-baserad dokumenthantering eller granskning av AI-resultat. Vi börjar med ett förutsättningslöst samtal. Ett eventuellt pilotprov återskapar ett avgränsat arbetsmoment med syntetiska data.</p>
+      <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7531429106639523842/">Skriv till Frida via AMCOS-inlägget på LinkedIn</a>. En kort beskrivning av arbetsflödet räcker.</p>
+    </section>
+    <footer>Demonstration av ett avgränsat arkivexempel. Ingen livekörning eller insamling av data.</footer>
+  </main>
+</body>
+</html>
